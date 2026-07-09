@@ -1,0 +1,23 @@
+{
+    "id": "my-mingw-template",
+    "name": "My MinGW Makefile Project",
+    "description": "Auto-generated template from my working Makefile setup",
+    "author": "Me",
+    "version": "1.0.0",
+    "directories": [
+        "src",
+        "include",
+        "lib",
+        "bin",
+        ".vscode"
+    ],
+    "files": {
+        "src/main.cpp": "#include <iostream>\n\nint main() {\n    std::cout << \"Hello from Fenix!\" << std::endl;\n}\n",
+        "Makefile": "CXX\t\t  := clang++\nCXX_FLAGS := -Wall -Wextra -std=c++17 -g\n\nBIN\t\t:= bin\nSRC\t\t:= src\nINCLUDE\t:= include\nLIB\t\t:= lib\n\nLIBRARIES\t:=\nEXECUTABLE\t:= main\n\n\nall: $(BIN)/$(EXECUTABLE)\n\nrun: clean all\n\t./$(BIN)/$(EXECUTABLE)\n\n$(BIN)/$(EXECUTABLE): $(SRC)/*.cpp\n\t$(CXX) $(CXX_FLAGS) -I$(INCLUDE) -L$(LIB) $^ -o $@ $(LIBRARIES)\n\nclean:\n\t-rm $(BIN)/*\n",
+        ".vscode/tasks.json": "{\n    \"version\": \"2.0.0\",\n    \"tasks\": [\n        {\n            \"label\": \"Build C++ project\",\n            \"type\": \"shell\",\n            \"group\": {\n                \"kind\": \"build\",\n                \"isDefault\": true\n            },\n            \"command\": \"make\"\n        },\n        {\n            \"label\": \"Build & run C++ project\",\n            \"type\": \"shell\",\n            \"group\": {\n                \"kind\": \"test\",\n                \"isDefault\": true\n            },\n            \"command\": \"make\",\n            \"args\": [\n                \"run\"\n            ]\n        }\n    ]\n}",
+        ".vscode/launch.json": "{\n  \"version\": \"0.2.0\",\n  \"configurations\": [\n      {\n          \"name\": \"C++ Debug (lldb)\",\n          \"type\": \"cppdbg\",\n          \"request\": \"launch\",\n          \"program\": \"${workspaceFolder}/bin/main\",\n          \"preLaunchTask\": \"Build C++ project\",\n          \"args\": [],\n          \"stopAtEntry\": false,\n          \"cwd\": \"${workspaceFolder}\",\n          \"environment\": [],\n          \"externalConsole\": true,\n          \"MIMode\": \"lldb\"\n      }\n  ]\n}"
+    },
+    "postRunCommands": [
+        "make run"
+    ]
+}

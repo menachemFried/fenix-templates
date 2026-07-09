@@ -1,0 +1,17 @@
+{
+    "$schema": "https://raw.githubusercontent.com/FenixTemplates/FenixTemplates/master/fenix-schema.json",
+    "author": "Menachem Fried",
+    "repoName": "My C++ Templates Repo",
+    "repoUrl": "",
+    "version": 1.0,
+    "templates": [
+        {
+            "id": "my-mingw-template",
+            "displayName": "My MinGW Makefile Project",
+            "language": "C++",
+            "description": "Auto-generated template from my working Makefile setup",
+            "category": ["C++", "Makefile"],
+            "downloadUrl": "https://raw.githubusercontent.com/menachemfried/fenix-templates/main/template-content.json"
+        }
+    ]
+}
