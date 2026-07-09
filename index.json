@@ -10,7 +10,11 @@
             "displayName": "C++ CMake & Clang Project (Auto-Debug)",
             "language": "C++",
             "description": "פרויקט תשתיתי המקים מערכת C++ המבוססת על CMake, קימפול Clang, השלמת קוד שקופה דרך clangd וניפוי שגיאות באמצעות CodeLLDB.",
-            "category": ["C++", "CMake", "Clang"],
+            "category": [
+                "C++",
+                "CMake",
+                "Clang"
+            ],
             "pic": "https://raw.githubusercontent.com/menachemFried/fenix-templates/main/preview.png",
             "downloadUrl": "https://raw.githubusercontent.com/menachemFried/fenix-templates/main/template-content.json"
         }
