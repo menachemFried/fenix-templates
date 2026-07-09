@@ -1,0 +1,10 @@
+{
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "clangd.arguments": [
+        "--background-index",
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--clang-tidy",
+        "--completion-style=detailed"
+    ],
+    "editor.formatOnSave": true
+}

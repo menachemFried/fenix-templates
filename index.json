@@ -2,7 +2,7 @@
     "$schema": "https://raw.githubusercontent.com/FenixTemplates/FenixTemplates/master/fenix-schema.json",
     "author": "Menachem Fried",
     "repoName": "My C++ Templates Repo",
-    "repoUrl": "",
+    "repoUrl": "https://raw.githubusercontent.com/menachemFried/fenix-templates/main/",
     "version": 1.0,
     "templates": [
         {
@@ -15,7 +15,7 @@
                 "CMake",
                 "Clang"
             ],
-            "pic": "https://raw.githubusercontent.com/menachemFried/fenix-templates/main/preview.png",
+            "img": "https://raw.githubusercontent.com/menachemFried/fenix-templates/main/preview.png",
             "downloadUrl": "https://raw.githubusercontent.com/menachemFried/fenix-templates/main/template-content.json"
         }
     ]

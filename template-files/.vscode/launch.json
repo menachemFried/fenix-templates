@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug C++ via CodeLLDB",
+            "type": "codelldb",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/FenixApp.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CMake: Build",
+            "terminal": "integrated",
+            "expressions": "native",
+            "stopAtEntry": false
+        }
+    ]
+}

@@ -12,12 +12,35 @@
         ".vscode"
     ],
     "files": {
-        "CMakeLists.txt": "cmake_minimum_required(VERSION 3.15)\nproject(FenixApp CXX)\n\nset(CMAKE_EXPORT_COMPILE_COMMANDS ON)\n\nset(CMAKE_CXX_STANDARD 17)\nset(CMAKE_CXX_STANDARD_REQUIRED ON)\nset(CMAKE_CXX_FLAGS \"${CMAKE_CXX_FLAGS} -Wall -Wextra -g3 -O0\")\n\ninclude_directories(UserApp/Inc)\n\nfile(GLOB_RECURSE SOURCES \"UserApp/Src/*.cpp\")\n\nadd_executable(${PROJECT_NAME} ${SOURCES})\n",
-        "UserApp/Inc/hello.hpp": "#pragma once\n\nvoid printHello();\n",
-        "UserApp/Src/main.cpp": "#include <iostream>\n#include \"hello.hpp\"\n\nvoid printHello() {\n    std::cout << \"Hello from UserApp!\" << std::endl;\n}\n\nint main() {\n    std::cout << \"System Initialized Successfully via Fenix Toolchain.\" << std::endl;\n    printHello();\n    int debug_var = 42;\n    std::cout << \"Value of memory allocation: \" << debug_var << std::endl;\n    return 0;\n}\n",
-        ".vscode/settings.json": "{\n    \"C_Cpp.intelliSenseEngine\": \"disabled\",\n    \"clangd.arguments\": [\n        \"--background-index\",\n        \"--compile-commands-dir=${workspaceFolder}/build\",\n        \"--clang-tidy\",\n        \"--completion-style=detailed\"\n    ],\n    \"editor.formatOnSave\": true\n}\n",
-        ".vscode/tasks.json": "{\n    \"version\": \"2.0.0\",\n    \"tasks\": [\n        {\n            \"label\": \"CMake: Configure\",\n            \"type\": \"shell\",\n            \"command\": \"cmake\",\n            \"args\": [\n                \"-S\", \".\", \n                \"-B\", \"build\", \n                \"-DCMAKE_CXX_COMPILER=clang++\"\n            ],\n            \"problemMatcher\": []\n        },\n        {\n            \"label\": \"CMake: Build\",\n            \"type\": \"shell\",\n            \"command\": \"cmake\",\n            \"args\": [\n                \"--build\", \"build\"\n            ],\n            \"group\": {\n                \"kind\": \"build\",\n                \"isDefault\": true\n            },\n            \"problemMatcher\": [ \"$gcc\" ],\n            \"dependsOn\": [ \"CMake: Configure\" ]\n        }\n    ]\n}\n",
-        ".vscode/launch.json": "{\n    \"version\": \"0.2.0\",\n    \"configurations\": [\n        {\n            \"name\": \"Debug C++ via CodeLLDB\",\n            \"type\": \"codelldb\",\n            \"request\": \"launch\",\n            \"program\": \"${workspaceFolder}/build/FenixApp.exe\",\n            \"args\": [],\n            \"cwd\": \"${workspaceFolder}\",\n            \"preLaunchTask\": \"CMake: Build\",\n            \"terminal\": \"integrated\",\n            \"expressions\": \"native\",\n            \"stopAtEntry\": false\n        }\n    ]\n}\n"
+        "download": [
+            {
+                "from": "template-files/CMakeLists.txt",
+                "to": "CMakeLists.txt"
+            },
+            {
+                "from": "template-files/UserApp/Inc/hello.hpp",
+                "to": "UserApp/Inc/hello.hpp"
+            },
+            {
+                "from": "template-files/UserApp/Src/main.cpp",
+                "to": "UserApp/Src/main.cpp"
+            },
+            {
+                "from": "template-files/.vscode/settings.json",
+                "to": ".vscode/settings.json"
+            },
+            {
+                "from": "template-files/.vscode/tasks.json",
+                "to": ".vscode/tasks.json"
+            },
+            {
+                "from": "template-files/.vscode/launch.json",
+                "to": ".vscode/launch.json"
+            }
+        ],
+        "open": [
+            "UserApp/Src/main.cpp"
+        ]
     },
     "postRunCommands": [
         "cmake -S . -B build -DCMAKE_CXX_COMPILER=clang++"
