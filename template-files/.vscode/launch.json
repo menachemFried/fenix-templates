@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "Debug C++ via CodeLLDB",
-            "type": "codelldb",
+            "type": "lldb",
             "request": "launch",
             "program": "${workspaceFolder}/build/FenixApp.exe",
             "args": [],
@@ -11,7 +11,11 @@
             "preLaunchTask": "CMake: Build",
             "terminal": "integrated",
             "expressions": "native",
-            "stopAtEntry": false
+            "stopAtEntry": false,
+            "log": {
+                "level": "verbose",
+                "stdio": true
+            }
         }
     ]
 }
