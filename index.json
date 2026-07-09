@@ -6,12 +6,12 @@
     "version": 1.0,
     "templates": [
         {
-            "id": "my-mingw-template",
-            "displayName": "My MinGW Makefile Project",
+            "id": "cmake-clang-lldb-template",
+            "displayName": "C++ CMake & Clang Project (Auto-Debug)",
             "language": "C++",
-            "description": "Auto-generated template from my working Makefile setup",
-            "category": ["C++", "Makefile"],
-            "downloadUrl": "https://raw.githubusercontent.com/menachemfried/fenix-templates/main/template-content.json"
+            "description": "פרויקט תשתיתי המקים מערכת C++ המבוססת על CMake, קימפול Clang, השלמת קוד שקופה דרך clangd וניפוי שגיאות באמצעות CodeLLDB.",
+            "category": ["C++", "CMake", "Clang"],
+            "downloadUrl": "https://raw.githubusercontent.com/menachemFried/fenix-templates/main/template-content.json"
         }
     ]
 }
