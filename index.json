@@ -54,7 +54,7 @@
                     "UserApp/Src/main.cpp"
                 ]
             },
-            "command": "cmake -S . -B build -DCMAKE_CXX_COMPILER=clang++"
+            "command": "cmake -G \"MinGW Makefiles\" -S . -B build -DCMAKE_CXX_COMPILER=clang++"
         }
     ]
 }

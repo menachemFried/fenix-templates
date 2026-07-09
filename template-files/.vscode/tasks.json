@@ -6,6 +6,7 @@
             "type": "shell",
             "command": "cmake",
             "args": [
+                "-G", "MinGW Makefiles",
                 "-S", ".", 
                 "-B", "build", 
                 "-DCMAKE_CXX_COMPILER=clang++"
